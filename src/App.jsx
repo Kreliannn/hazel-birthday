@@ -224,7 +224,7 @@ function useMicBlow(onBlow) {
       const data = new Uint8Array(analyser.frequencyBinCount);
       // High threshold — only a real sustained blow (not talking or ambient noise) will trigger
       const THRESHOLD = 110;
-      const NEEDED_FRAMES = 22; // ~0.35s of sustained loud audio at 60fps
+      const NEEDED_FRAMES = 14; // ~0.35s of sustained loud audio at 60fps
 
       const check = () => {
         analyser.getByteFrequencyData(data);
